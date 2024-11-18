@@ -1,12 +1,10 @@
-This repository contains scripts that apply boilerplate `key` values to resources.
-
 # What is this useful for?
 
 Import and export functionality in Composable Commerce uses the `key` field as the identifier for resources. If your resources do not have a `key`, they cannot be updated via import and their references may be broken in exported files.
 
 As the `key` value is optional, resources within your Composable Commerce Project may lack them.
 
-These scripts apply boilerplate `key` values to resources, which enables you to fully use the import and export functions within Composable Commerce.
+This app sets boilerplate `key` values to resources, which enables you to fully use the import and export functions within Composable Commerce.
 
 # How do I set this up?
 
