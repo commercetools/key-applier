@@ -7,8 +7,7 @@ As the `key` value is optional, resources within your Composable Commerce Projec
 This app sets boilerplate `key` values to resources, which enables you to fully use the import and export functions within Composable Commerce.
 
 > [!NOTE]  
-> The boilerplate `key` values use the format: {resourceType}_{resourceId}.
-> For example: `category_512a4466-6876-4c41-add8-1406c6c68da3`.
+> The boilerplate `key` values use the format: {resourceType}_{resourceId}.<br/><br/>For example: `category_512a4466-6876-4c41-add8-1406c6c68da3`
 
 # How do I set this up?
 
