@@ -75,13 +75,13 @@ const productToVariantAssets = (product: Product) => {
 
 const getAssetActions = (productId: string, variantAssets: VariantAsset[]) => {
   const actions = variantAssets.map(({ assetId, variantId }) => {
-    const key = getNextAssetKey(productId, assetId);
+    const assetKey = getNextAssetKey(productId, assetId);
 
     return {
       setAssetKey: {
         assetId,
         variantId,
-        key,
+        assetKey,
       },
     };
   });

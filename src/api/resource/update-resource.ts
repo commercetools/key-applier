@@ -5,7 +5,7 @@ import {
   resourceToActionBatches,
   resourceMutationMap,
 } from "./keyable-type/index.js";
-import { consoleLogger } from "../../lib/log.js";
+import { consoleLogger, fileLogger } from "../../lib/log.js";
 
 type ActionBatch = Array<Record<string, any>>;
 
@@ -20,12 +20,24 @@ const executeGraphQLMutation = async (
   variables: Record<string, any>
 ): Promise<void> => {
   try {
-    await graphQlRequest({
+    const response = await graphQlRequest({
       query: mutation,
       variables,
     });
+
+    if (response.body.errors) {
+      fileLogger.error(JSON.stringify(response.body.errors, null, 2));
+    } else {
+      fileLogger.info(JSON.stringify(response.body.data, null, 2));
+    }
   } catch (error) {
     consoleLogger.error("GraphQL Request Error:", error);
+    if (typeof error === "object" && error && "body" in error) {
+      fileLogger.error(error.body);
+    } else {
+      fileLogger.error(error);
+    }
+
     throw error;
   }
 };

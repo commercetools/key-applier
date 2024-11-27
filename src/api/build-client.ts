@@ -4,8 +4,10 @@ import {
   type AuthMiddlewareOptions,
   type HttpMiddlewareOptions,
 } from "@commercetools/ts-client";
-import "dotenv/config";
+import dotenv from "dotenv";
 import { getOrFail } from "../utils/env.js";
+
+dotenv.config({ override: true });
 
 // Environment variables
 const clientSecret = getOrFail("CTP_CLIENT_SECRET");
