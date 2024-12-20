@@ -19,6 +19,7 @@
     "logform": "^2.6.1",
     "node-fetch": "^3.3.2",
     "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
     "winston": "^3.16.0",
     "yargs": "^17.7.2"
   },
