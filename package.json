@@ -5,7 +5,7 @@
   "description": "Applies keys to commercetools resources to support the new CSV import/export process.",
   "main": "dist/main.js",
   "scripts": {
-    "start": "node dist/main.js",
+    "start": "node --no-warnings dist/main.js",
     "build": "tsc",
     "dev": "tsx src/main.ts"
   },
