@@ -13,6 +13,7 @@ export enum KeyableResourceType {
   ProductType = "productType",
   StandalonePrice = "standalonePrice",
   TaxCategory = "taxCategory",
+  InventoryEntry = "inventoryEntry",
 }
 
 interface ResourceQueryFields {
@@ -90,6 +91,13 @@ const resourceToQueryField = (type: KeyableResourceType) => {
         queryField: "taxCategories",
         mutationName: "updateTaxCategory",
         actionTypeName: "TaxCategoryUpdateAction",
+      };
+    case KeyableResourceType.InventoryEntry:
+      return {
+        queryName: "InventoryEntriesQuery",
+        queryField: "inventoryEntries",
+        mutationName: "updateInventoryEntry",
+        actionTypeName: "InventoryEntryUpdateAction",
       };
   }
 };

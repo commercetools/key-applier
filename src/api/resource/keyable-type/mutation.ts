@@ -125,4 +125,7 @@ export const resourceMutationMap = {
   [KeyableResourceType.TaxCategory]: {
     mutation: updateResourceMutation(KeyableResourceType.TaxCategory),
   },
+  [KeyableResourceType.InventoryEntry]: {
+    mutation: updateResourceMutation(KeyableResourceType.InventoryEntry),
+  },
 };
