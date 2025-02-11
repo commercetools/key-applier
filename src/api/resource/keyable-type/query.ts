@@ -113,4 +113,8 @@ export const resourceQueryPredicateMap = {
     query: createResourceQuery(KeyableResourceType.TaxCategory),
     predicate: keylessPredicate,
   },
+  [KeyableResourceType.InventoryEntry]: {
+    query: createResourceQuery(KeyableResourceType.InventoryEntry),
+    predicate: keylessPredicate,
+  },
 };
