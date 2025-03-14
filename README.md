@@ -29,6 +29,7 @@ This app sets boilerplate `key` values to resources, which enables you to fully 
    - Products
    - Standalone Prices
    - Tax Categories
+   - Inventory Entries
 5. Download the **Environment Variables (.env)** for this API Client.
 6. Rename the downloaded file `.env`, and copy it to the cloned repository.
 7. Run the application:
